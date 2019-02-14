@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<script>
+    var x=25;
+
+    function  fnc() {
+        if (x > 0 && x <= 25) {
+            alert("You have been enrolled !!");
+            x--;
+        } else {
+            alert("Sorry! Seats have been filled");
+        }
+
+        document.getElementById("Seats").innerHTML = x;
+    }
+</script>
+<div class="w3-bar w3-blue">
+    <h2 class="w3-bar-item">Course-E-courses</h2>
+    <div align="right" style="padding:30px 10px">
+        <button class="first-button"><a href="active-course-e-courses.html" style="color: navy">Return To Courses</a>
+            <button class="first-button" style="color: navy" onclick="fnc()">Enroll!
+    </div>
+    <div align="right">
+        Number of Sears Left!  <span id="Seats"></span>
+    </div>
+</div>
+<div class="container">
+    <div class="jumbotron" style="background-color: yellow">
+        <h1>Python</h1>
+        <p>
+            Python is an interpreted, high-level, general-purpose programming language.
+            Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes
+            code readability, notably using significant whitespace. It provides constructs that enable clear programming on
+            both small and large scales.
+            Van Rossum led the language community until stepping down as leader in July 2018.
+            Python features a dynamic type system and automatic memory management.
+            It supports multiple programming paradigms, including object-oriented, imperative, functional and procedural,
+            and has a large and comprehensive standard library.
+            Python interpreters are available for many operating systems.
+            CPython, the reference implementation of Python, is open source software
+            and has a community-based development model, as do nearly all of Python's other implementations.
+            Python and CPython are managed by the non-profit Python Software Foundation.
+        </p>
+    </div>
+    <div  class="col-md-12 col-xs-12" id="Hadoop-image">
+        <img src="python%201.png" style="width: 500px">
+        <img src="python%202.png" style="width: 500px">
+        <img src="" style="width: 500px">
+    </div>
+</body>
+</html>

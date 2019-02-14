@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login/Sign up!</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="CourseStyle.css">
+</head>
+<body align="center">
+<div class="w3-bar w3-blue">
+    <h1 class="w3-bar-item" >Login to Course-E-courses</h1>
+</div>
+<h1 align="center">Login/Sign up</h1><br><br>
+<p>USER-NAME:<input type="text" name="user-name" placeholder="Enter Username" id="username"><br>
+<p>PASSWORD :<input type="password" name="user-name" placeholder="Enter Password" id="password"><br>
+<div><button class="first-button" onclick="finduser()" >Login/Sign up</button></div><br>
+<a href="">Continue as guest</a>
+<script>
+function finduser(){
+var x=JSON.parse('{ "user1":"timcook", "user2":"zukerberg", "password1":"apple" , "password2":"facebook"}');
+var u=document.getElementById("username").value;
+var p=document.getElementById("password").value;
+if((p == x.password1 && u == x.user1) || (p==x.password2 && u== x.user2)){
+    window.open("active-course-e-courses.html");
+}
+
+else {
+    alert("Invalid Credenials");
+}
+}
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

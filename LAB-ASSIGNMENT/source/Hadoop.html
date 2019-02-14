@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hadoop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<script>
+    var x=25;
+
+    function  fnc() {
+        if (x > 0 && x <= 25) {
+            alert("You have been enrolled !!");
+            x--;
+        } else {
+            alert("Sorry! Seats have been filled");
+        }
+
+        document.getElementById("Seats").innerHTML = x;
+    }
+</script>
+<div class="w3-bar w3-blue">
+    <h2 class="w3-bar-item">Course-E-courses</h2>
+    <div align="right" style="padding:30px 10px">
+        <button class="first-button"><a href="active-course-e-courses.html" style="color: navy">Return To Courses</a>
+            <button class="first-button" style="color: navy" onclick="fnc()">Enroll!
+    </div>
+    <div align="right">
+        Number of Sears Left!  <span id="Seats"></span>
+    </div>
+</div>
+<div class="container">
+    <div class="jumbotron" style="background-color: yellow">
+        <h1>Big Data - Hadoop</h1>
+        <p>Big data refers to data sets that are too large or complex for traditional data-processing application software to adequately deal with.
+            Data with many cases (rows) offer greater statistical power,
+            while data with higher complexity (more attributes or columns) may lead to a higher false discovery rate.
+            Big data challenges include capturing data, data storage, data analysis, search, sharing, transfer, visualization, querying, updating, information privacy and data source.
+            Big data was originally associated with three key concepts: volume, variety, and velocity.
+            Other concepts later attributed with big data are veracity (i.e., how much noise is in the data) and value</p>
+    </div>
+<div  class="col-md-12 col-xs-12" id="Hadoop-image">
+    <img src="Big-Data-Verteda.jpeg" style="width: 500px">
+    <img src="Big%20Data%201.jpg" style="width: 500px">
+</div>
+</body>
+</html>

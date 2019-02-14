@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BlockChain</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<script>
+    var x=25;
+
+    function  fnc() {
+        if (x > 0 && x <= 25) {
+            alert("You have been enrolled !!");
+            x--;
+        } else {
+            alert("Sorry! Seats have been filled");
+        }
+
+        document.getElementById("Seats").innerHTML = x;
+    }
+</script>
+<div class="w3-bar w3-blue">
+    <h2 class="w3-bar-item">Course-E-courses</h2>
+    <div align="right" style="padding:30px 10px">
+        <button class="first-button"><a href="active-course-e-courses.html" style="color: navy">Return To Courses</a>
+            <button class="first-button" style="color: navy" onclick="fnc()">Enroll!
+    </div>
+    <div align="right">
+        Number of Sears Left!  <span id="Seats"></span>
+    </div>
+</div>
+<div class="container">
+    <div class="jumbotron" style="background-color: silver">
+        <h1>Blockchain</h1>
+        <p>
+            BlockChain is a growing list of records, called blocks, which are linked using cryptography.
+            Each block contains a cryptographic hash of the previous block,a timestamp, and transaction data
+            (generally represented as a merkle tree root hash).By design, a blockchain is resistant to modification of the data.
+            It is "an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and
+            permanent way".For use as a distributed ledger, a blockchain is typically managed by a peer-to-peer network collectively
+            adhering to a protocol for inter-node communication and validating new blocks. Once recorded, the data in any given block
+            cannot be altered retroactively without alteration of all subsequent blocks, which requires consensus of the network majority.
+            Although blockchain records are not unalterable, blockchains may be considered secure by design and exemplify a distributed
+            computing system with high Byzantine fault tolerance.
+            Decentralized consensus has therefore been claimed with a blockchain.
+        </p>
+    </div>
+    <div>
+        Some of the Cryptocurrencies are :<br>
+        <ol>
+            <li>Bitcoin Cash</li>
+            <li>Ethereum</li>
+            <li>Zcash</li>
+            <li>LiteCoin</li>
+    </div>
+    <div  class="col-md-12 col-xs-12" id="java-image">
+        <img src="Blockchain.png" style="width: 500px">
+        <img src="Bitcoin.jpg" style="width: 500px">
+    </div>
+</body>
+</html>

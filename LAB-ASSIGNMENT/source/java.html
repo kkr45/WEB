@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<script>
+    var x=25;
+
+    function  fnc() {
+        if (x > 0 && x <= 25) {
+            alert("You have been enrolled !!");
+            x--;
+        } else {
+            alert("Sorry! Seats have been filled");
+        }
+
+        document.getElementById("Seats").innerHTML = x;
+    }
+</script>
+<div class="w3-bar w3-blue">
+    <h2 class="w3-bar-item">Course-E-courses</h2>
+    <div align="right" style="padding:30px 10px">
+        <button class="first-button"><a href="active-course-e-courses.html" style="color: navy">Return To Courses</a>
+            <button class="first-button" style="color: navy" onclick="fnc()">Enroll!
+    </div>
+    <div align="right">
+        Number of Sears Left!  <span id="Seats"></span>
+    </div>
+</div>
+<div class="container">
+    <div class="jumbotron" style="background-color: orangered">
+        <h1>Core-java</h1>
+        <p>
+            Java is a general-purpose computer-programming language that is concurrent, class-based,
+            object-oriented,and specifically designed to have as few implementation dependencies as possible.
+            It is intended to let application developers "write once, run anywhere" (WORA),meaning that compiled Java
+            code can run on all platforms that support Java without the need for recompilation.Java applications are
+            typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of computer architecture.
+            As of 2016, Java is one of the most popular programming languages in use,particularly for client-server
+            web applications, with a reported 9 million developers.Java was originally developed by James Gosling at Sun Microsystems
+            (which has since been acquired by Oracle Corporation) and released in 1995 as a core component of Sun Microsystems' Java platform.
+            The language derives much of its original features from SmallTalk,
+            with a syntax similar to C and C++, but it has fewer low-level facilities than either of them.
+        </p>
+    </div>
+    <div  class="col-md-12 col-xs-12" id="java-image">
+        <img src="Java%201.jpeg" style="width: 1000px">
+    </div>
+</body>
+</html>

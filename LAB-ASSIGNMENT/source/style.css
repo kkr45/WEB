@@ -1,0 +1,22 @@
+.first-button {
+    background-color: #4CAF50;
+    color: yellow;
+    padding: 10px 10px;
+    text-align:"centre";
+    align:"right"
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 5px;
+}
+#set-image {
+    background-color:deepskyblue ;
+    padding: 20px;
+
+}
+#set-image1 {
+    background-color:deepskyblue ;
+    padding: 20px;
+    margin : 20px;
+
+}
