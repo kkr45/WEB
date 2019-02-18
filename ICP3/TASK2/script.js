@@ -1,53 +1,71 @@
+function getGithubInfo(user) {
+    console.log(user)
+    var url_1="https://api.github.com/users/"+user;
+    console.log(url_1);
+    $('#usrname').html('');
+    $('#usrid').html('');
+    $('.avatar').html('');
+    $('.information').html('');
+    //1. Create an instance of XMLHttpRequest class and send a GET request using it. The function should finally return the object(it now contains the response!)
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 ) {
+            if (this.status == 200) {
+                $('#usrname').text('Username:');
+                $('#usrid').text('ID');
+                //$('.avatar').html('<img src=' + myObject["avatar_url"] + ' alt="img">')
+                //$('.information').html('<a href=' + myObject['url'] + '> Link to profile </a>');
+                var myObject = JSON.parse(this.responseText);
+                console.log(myObject)
+                $('#usrname').append(myObject['login']);
+                $('#usrid').append(myObject['id'])
+                $('.avatar').html('<img src=' + myObject["avatar_url"] + ' alt="img">')
+                $('.information').html('<a href=' + myObject['html_url'] + '> Link to profile </a>');
+            }
+            else
+            {
+                $('#usrname').text('Invalid User');
+            }
+        }
+    };
 
-// an array of colors and assign it to a variable colors
-var colors = [ "22ac5e", "d68236", "71b5c2", "af2655", "b34de7", "e6bd01", "104393", "ca4d94", "4a772d", "c180a7", "958112", "8d2f8d" ]
-// sets the preview color to the one entered in the input and display its color code using setPreviewColor function
-function setPreviewColor(color) {
-    $('.preview').css('background-color', color);
-    $('.color-code').text($('.preview').css('background-color'));
-}
-//adds color boxes to the favorite colors
-function addBox(color) {
-    $('#colors').prepend("<div class='item' style='background-color: " + color + ";'><div>");
+    xhttp.open("GET",url_1,false);
+    xhttp.send();
+
+
 }
 
-var previewColor;
+function showUser(user) {
+    console.log(1)
+    //2. set the contents of the h2 and the two div elements in the div '#profile' with the user content
+
+}
+
+function noSuchUser(username) {
+    //3. set the elements such that a suitable message is displayed
+
+    console.log(2)
+
+}
+
 
 $(document).ready(function(){
-
-    //1.As the page loads add each color in the colors array to the div '#colors'
-
-    colors.forEach(function(color) {
-        addBox(color)});
-
-//set the preview color to one of the colors in the colors array randomly
-    setPreviewColor(colors[Math.floor(Math.random()*colors.length)]);
-    // an event handler for the key up event i.e. when the user types the color in the input and releases the key on the keyboard
-//The event should set the preview color to the color typed in the input
-    $(document).on('keydown keyup keypress', '#color', function(){
-        color = $(this).val();
-        setPreviewColor(color);
-    });
-//2.Write an event handler to handle the click the event on the add to favorite button so that the color gets added to the list of favorite colors,
-// the content of the input gets cleared and the focus gets back on the input
-    $(document).on('click', '#add-to-favorite', function() {
-        addBox(color);
-    });
-
-//3.Write events handlers such that whenever any item in the favorite colors is clicked or hovered, the color gets displayed in the preview div
-
-    $('#colors').on('mouseover', '.item', function(){
-        previewColor=$('.preview').css('background-color');
-        color = $(this).css("background-color");
-        setPreviewColor(color);
-    });
-
-    $('#colors').on('mouseleave', '.item', function(){
-        setPreviewColor(previewColor);
-    });
-
-    $('#colors').on('click','.item', function(){
-        previewColor=color;
-    });
-
+    $(document).on('keypress', '#username', function(e){
+        //check if the enter(i.e return) key is pressed
+        if (e.which == 13) {
+            //get what the user enters
+            username = $(this).val();
+            //reset the text typed in the input
+            $(this).val("");
+            //get the user's information and store the respsonse
+            response = getGithubInfo(username);
+            //if the response is successful show the user's details
+            if (response.status == 200) {
+                showUser(JSON.parse(response.responseText));
+                //else display suitable message
+            } else {
+                noSuchUser(username);
+            }
+        }
+    })
 });
