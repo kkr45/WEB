@@ -1,0 +1,54 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="row" align="center">
+  <form action="#">
+    <table>
+      <tr>
+        <td><select name="from"  class="dropdown-content" #inputlang>
+          <option selected disabled>Input language</option>
+          <option value="te">Telugu </option>
+          <option value="hi">Hindi</option>
+          <option value="ml">Malayalam</option>
+          <option value="ta">Tamil</option>
+          <option value="mr">Marathi</option>
+          <option value="kn">Kannada</option>
+          <option value="ja">Japanese</option>
+          <option value="fr">French</option>
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
+          <option value="de">German</option>
+          <option value="gu">Gujarati</option>
+          <option value="ga">Irish</option>
+          <option value="zh">Latin</option>
+          <option value="zh">Chinese</option>
+          <option value="ko">Korean</option>
+          <option value="el">Bengali</option>
+          <option value="en">English</option>
+        </select></td>
+        <td><input type="text" id="phrase" placeholder="Enter The Text" class="form-control" #text></td>
+      </tr>
+    </table>
+    <select name="to" class="dropdown-content" #outputlang>
+      <option selected disabled>Translate to</option>
+      <option value="te">Telugu </option>
+      <option value="hi">Hindi</option>
+      <option value="ml">Malayalam</option>
+      <option value="ta">Tamil</option>
+      <option value="en">English</option>
+      <option value="mr">Marathi</option>
+      <option value="kn">Kannada</option>
+      <option value="ja">Japanese</option>
+      <option value="fr">French</option>
+      <option value="es">Spanish</option>
+      <option value="de">German</option>
+      <option value="gu">Gujarati</option>
+      <option value="ga">Irish</option>
+      <option value="zh">Latin</option>
+      <option value="es">Spanish</option>
+      <option value="zh">Chinese</option>
+      <option value="ko">Korean</option>
+      <option value="el">Bengali</option>
+    </select>
+    <button (click)="translate()" class="btn">Click here to translate</button></form>
+  <p><h4><b>Translated Word:</b></h4>
+  <p><h4><b>{{ word }}</b></h4>
+</div>
