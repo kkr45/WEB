@@ -1,0 +1,13 @@
+image{
+  height:45em; background-size:cover; width:100%;
+  background-position:50% 50%;
+}
+
+.jumbotron {
+  margin-bottom: 0px;
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: repeat-x;
+  color: white;
+  text-shadow: black 0.3em 0.3em 0.3em;
+}
